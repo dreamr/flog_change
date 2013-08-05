@@ -1,0 +1,222 @@
+  4771.2: flog total
+     8.5: flog/method average
+
+   330.3: ReportsHelper total
+    36.9: ReportsHelper#qualified_added_to_crm_amount_for app/helpers/reports_helper.rb:149
+    31.4: ReportsHelper#qualified_other_for app/helpers/reports_helper.rb:110
+    31.4: ReportsHelper#qualified_later_for app/helpers/reports_helper.rb:123
+    31.4: ReportsHelper#qualified_already_in_crm_for app/helpers/reports_helper.rb:97
+    31.4: ReportsHelper#qualified_added_to_crm_for app/helpers/reports_helper.rb:136
+    31.4: ReportsHelper#qualified_already_owns_for app/helpers/reports_helper.rb:71
+    31.4: ReportsHelper#qualified_commited_to_competitor_for app/helpers/reports_helper.rb:84
+    30.2: ReportsHelper#beginning_of_quarter app/helpers/reports_helper.rb:10
+    23.1: ReportsHelper#current_quarter    app/helpers/reports_helper.rb:3
+    21.2: ReportsHelper#received_hotplays_for app/helpers/reports_helper.rb:45
+    16.5: ReportsHelper#qualified_hotplays_for app/helpers/reports_helper.rb:56
+    14.3: ReportsHelper#association_name   app/helpers/reports_helper.rb:24
+
+   318.4: QualificationsController total
+   103.4: QualificationsController#crm     app/controllers/qualifications_controller.rb:124
+    60.4: QualificationsController#create_qualification app/controllers/qualifications_controller.rb:210
+    39.7: QualificationsController#later   app/controllers/qualifications_controller.rb:63
+    28.4: QualificationsController#never   app/controllers/qualifications_controller.rb:89
+    27.1: QualificationsController#quarters app/controllers/qualifications_controller.rb:268
+    22.2: QualificationsController#update  app/controllers/qualifications_controller.rb:40
+    19.5: QualificationsController#create  app/controllers/qualifications_controller.rb:26
+    17.8: QualificationsController#get_next_year app/controllers/qualifications_controller.rb:275
+
+   222.6: Hotplay total
+    92.2: Hotplay#qualify                  app/models/hotplay.rb:129
+    76.7: Hotplay#none
+    24.6: Hotplay#quarters                 app/models/hotplay.rb:268
+    16.0: Hotplay#people_involved          app/models/hotplay.rb:105
+    13.1: Hotplay#get_next_year            app/models/hotplay.rb:275
+
+   157.1: HotplayFilters total
+    32.5: HotplayFilters#exclude_qualified_filter app/filters/hotplay_filters.rb:107
+    28.8: HotplayFilters#account_targeting_filter app/filters/hotplay_filters.rb:84
+    23.9: HotplayFilters#routes_filter     app/filters/hotplay_filters.rb:129
+    14.9: HotplayFilters#min_revenue_filter app/filters/hotplay_filters.rb:41
+    14.9: HotplayFilters#max_employees_filter app/filters/hotplay_filters.rb:29
+    14.9: HotplayFilters#max_revenue_filter app/filters/hotplay_filters.rb:53
+    14.9: HotplayFilters#min_employees_filter app/filters/hotplay_filters.rb:17
+    12.2: HotplayFilters#products_filter   app/filters/hotplay_filters.rb:73
+
+   153.5: AccountFilters total
+    42.2: AccountFilters#hotplay_targeting_filter app/filters/account_filters.rb:91
+    20.2: AccountFilters#unqualified_accounts_for_user_and_hotplay app/filters/account_filters.rb:125
+    20.0: AccountFilters#products_filter   app/filters/account_filters.rb:69
+    17.7: AccountFilters#routes_filter     app/filters/account_filters.rb:104
+    13.4: AccountFilters#max_revenue_filter app/filters/account_filters.rb:58
+    13.4: AccountFilters#max_employees_filter app/filters/account_filters.rb:36
+    13.4: AccountFilters#min_employees_filter app/filters/account_filters.rb:25
+    13.4: AccountFilters#min_revenue_filter app/filters/account_filters.rb:47
+
+   121.4: UsersController total
+    21.7: UsersController#current_password_needed? app/controllers/users_controller.rb:131
+    20.7: UsersController#search           app/controllers/users_controller.rb:13
+    19.6: UsersController#update           app/controllers/users_controller.rb:77
+    19.5: UsersController#create           app/controllers/users_controller.rb:34
+    14.5: UsersController#change_password  app/controllers/users_controller.rb:139
+    12.9: UsersController#destroy          app/controllers/users_controller.rb:99
+    12.5: UsersController#index            app/controllers/users_controller.rb:5
+
+   108.7: User total
+    81.1: User#none
+    15.4: User#hotplays                    app/models/user.rb:130
+    12.2: User#set_temp_password           app/models/user.rb:199
+
+   101.0: SettingsController total
+    28.2: SettingsController#update        app/controllers/settings_controller.rb:21
+    25.0: SettingsController#rename_items  app/controllers/settings_controller.rb:51
+    18.2: SettingsController#edit          app/controllers/settings_controller.rb:5
+    17.7: SettingsController#remove_items  app/controllers/settings_controller.rb:69
+    12.0: SettingsController#update_routing app/controllers/settings_controller.rb:39
+
+    96.6: HotplaysController total
+    43.4: HotplaysController#send_notifications app/controllers/hotplays_controller.rb:137
+    37.9: HotplaysController#index         app/controllers/hotplays_controller.rb:8
+    15.4: HotplaysController#search        app/controllers/hotplays_controller.rb:35
+
+    83.2: ApplicationHelper total
+    38.7: ApplicationHelper#approved_or_rejected_status app/helpers/application_helper.rb:78
+    23.6: ApplicationHelper#industry_groups app/helpers/application_helper.rb:59
+    20.9: ApplicationHelper#index_pager    app/helpers/application_helper.rb:3
+
+    74.0: ReportsController total
+    34.6: ReportsController#users          app/controllers/reports_controller.rb:39
+    25.9: ReportsController#collateral_by_hotplay app/controllers/reports_controller.rb:29
+    13.5: ReportsController#qualifications_by_hotplay app/controllers/reports_controller.rb:12
+
+    53.7: VideoProcessor total
+    28.3: VideoProcessor#process           app/services/video_processor.rb:21
+    14.0: VideoProcessor#call              app/services/video_processor.rb:11
+    11.3: VideoProcessor#finish            app/services/video_processor.rb:40
+
+    49.7: ShortenerController total
+    36.3: ShortenerController#create       app/controllers/shortener_controller.rb:16
+    13.4: ShortenerController#show         app/controllers/shortener_controller.rb:5
+
+    47.4: Collateral total
+    47.4: Collateral#none
+
+    47.3: GenericQualificationsController total
+    47.3: GenericQualificationsController#create app/controllers/generic_qualifications_controller.rb:14
+
+    44.1: CollateralThumbnailUploader total
+    22.4: CollateralThumbnailUploader#default_filetype_icon app/uploaders/collateral_thumbnail_uploader.rb:78
+    21.7: CollateralThumbnailUploader#none
+
+    43.0: Account total
+    43.0: Account#none
+
+    42.9: QueueSalesForce total
+    42.9: QueueSalesForce::perform         app/workers/queue_sales_force.rb:7
+
+    42.3: AccountTargeter total
+    19.0: AccountTargeter#remove_invalidated_account_targets app/services/account_targeter.rb:30
+    11.9: AccountTargeter#add_new_account_targets app/services/account_targeter.rb:38
+    11.3: AccountTargeter#call             app/services/account_targeter.rb:7
+
+    39.3: HotplayApproversController total
+    15.4: HotplayApproversController#reject app/controllers/hotplay_approvers_controller.rb:28
+    12.6: HotplayApproversController#approve app/controllers/hotplay_approvers_controller.rb:18
+    11.3: HotplayApproversController#reset app/controllers/hotplay_approvers_controller.rb:9
+
+    38.8: QueueSendNotification total
+    38.8: QueueSendNotification::perform   app/workers/queue_send_notification.rb:4
+
+    37.9: QueueSugarcrm total
+    37.9: QueueSugarcrm::perform           app/workers/queue_sugarcrm.rb:6
+
+    36.9: LogoUploader total
+    21.7: LogoUploader#none
+    15.2: LogoUploader#default_url         app/uploaders/logo_uploader.rb:69
+
+    34.3: Qualification total
+    34.3: Qualification#none
+
+    33.1: HotplayTargeter total
+    19.0: HotplayTargeter#remove_invalidated_account_targets app/services/hotplay_targeter.rb:30
+    14.1: HotplayTargeter#call             app/services/hotplay_targeter.rb:7
+
+    32.0: QueueReportDownload total
+    32.0: QueueReportDownload::perform     app/workers/queue_report_download.rb:4
+
+    31.1: Devise total
+    31.1: Devise::PasswordExpiredController#update app/controllers/devise/password_expired_controller.rb:15
+
+    30.2: CollateralIbookThumbnailWorker total
+    30.2: CollateralIbookThumbnailWorker::perform app/workers/collateral_ibook_thumbnail_worker.rb:4
+
+    30.2: CollateralPdfThumbnailWorker total
+    30.2: CollateralPdfThumbnailWorker::perform app/workers/collateral_pdf_thumbnail_worker.rb:4
+
+    26.8: CollateralThumbnailDeterminationWorker total
+    26.8: CollateralThumbnailDeterminationWorker::perform app/workers/collateral_thumbnail_determination_worker.rb:4
+
+    26.2: UsersHelper total
+    26.2: UsersHelper#logins_last_3_months app/helpers/users_helper.rb:43
+
+    23.3: UserPermittedParams total
+    23.3: UserPermittedParams#current_password_needed? app/models/permitted_params/user_permitted_params.rb:64
+
+    22.9: CollateralAssetAssociationWorker total
+    22.9: CollateralAssetAssociationWorker::perform app/workers/collateral_asset_association_worker.rb:4
+
+    21.7: AvatarUploader total
+    21.7: AvatarUploader#none
+
+    17.1: Industry total
+    17.1: Industry#none
+
+    16.8: OwnershipsController total
+    16.8: OwnershipsController#destroy     app/controllers/ownerships_controller.rb:5
+
+    16.5: Ability total
+    16.5: Ability#initialize               app/models/ability.rb:4
+
+    16.0: UserFilters total
+    16.0: UserFilters#routes_for_account_and_hotplay app/filters/user_filters.rb:4
+
+    15.8: Reference total
+    15.8: Reference#none
+
+    15.7: CollateralImageThumbnailWorker total
+    15.7: CollateralImageThumbnailWorker::perform app/workers/collateral_image_thumbnail_worker.rb:4
+
+    15.5: Buyer total
+    15.5: Buyer#none
+
+    15.4: ProductsController total
+    15.4: ProductsController#search        app/controllers/products_controller.rb:9
+
+    15.4: IndustriesController total
+    15.4: IndustriesController#search      app/controllers/industries_controller.rb:9
+
+    15.4: AccountsController total
+    15.4: AccountsController#search        app/controllers/accounts_controller.rb:13
+
+    15.3: ApplicationController total
+    15.3: ApplicationController#redirect_if_password_needs_changed app/controllers/application_controller.rb:28
+
+    15.2: Coach total
+    15.2: Coach#none
+
+    14.2: Product total
+    14.2: Product#none
+
+    13.7: QueueHotplayCache total
+    13.7: QueueHotplayCache::perform       app/workers/queue_hotplay_cache.rb:5
+
+    13.3: WelcomeHelper total
+    13.3: WelcomeHelper#top_20_logins_last_7_days app/helpers/welcome_helper.rb:14
+
+    13.1: Url total
+    13.1: Url#shorten_long_url             app/models/url.rb:25
+
+    12.6: ZencoderEventHandler total
+    12.6: ZencoderEventHandler#finished    app/services/zencoder_event_handler.rb:18
+
+    12.0: Filter total
+    12.0: Filter#none

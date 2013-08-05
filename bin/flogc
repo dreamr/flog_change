@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+require_relative 'lib/flog_change/sample_cleaner'
+
+# Destroy old samples!
+SampleCleaner.clean
+
+# Flog that shit and dump the results to a sample
+run_on_dir = File.expand_path(ARGV[0], __FILE__)
+puts ["FLOGGING #{run_on_dir}. It may take a few moments",
+      "to build the results of your UGLY code and to",
+      "generate your graph."].join(" ")
+
+`find #{run_on_dir} -name \*.rb | xargs bundle exec flog -bdg > ./#{Time.now.to_i}.sample`
+
+# create graph html from the last 2 flog samples
+SampleGrapher.generate_graph
