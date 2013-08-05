@@ -20,6 +20,7 @@ describe FlogChange::GraphGenerator do
       `rm ./tmp/index.html` if File.exist?("./tmp/index.html")
       subject.generate
       @content = File.open("./tmp/index.html") {|f| f.read}
+      @html = Nokogiri::XML(@content)
     end
 
     it "must generate html file" do
@@ -28,25 +29,21 @@ describe FlogChange::GraphGenerator do
 
     describe "last_sample" do
       it "must include the sample score" do
-        html = Nokogiri::XML(@content)
-        html.css('div#last_sample div.score').text.must_equal("4939.0")
+        @html.css('div#last_sample div.score').text.must_equal("4939.0")
       end
 
       it "must include the sample method average" do
-        html = Nokogiri::XML(@content)
-        html.css('div#last_sample div.method_average').text.must_equal("8.5")
+        @html.css('div#last_sample div.method_average').text.must_equal("8.5")
       end
     end
 
     describe "this_sample" do
       it "must include the sample score" do
-        html = Nokogiri::XML(@content)
-        html.css('div#this_sample div.score').text.must_equal("420.0")
+        @html.css('div#this_sample div.score').text.must_equal("420.0")
       end
 
       it "must include the sample method average" do
-        html = Nokogiri::XML(@content)
-        html.css('div#this_sample div.method_average').text.must_equal("42.0")
+        @html.css('div#this_sample div.method_average').text.must_equal("42.0")
       end
     end
   end
