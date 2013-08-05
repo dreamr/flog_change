@@ -21,3 +21,5 @@ puts ["FLOGGING #{run_on_dir}. It may take a few moments",
 
 # create graph html from the last 2 flog samples
 FlogChange::GraphGenerator.generate
+
+open("./tmp/inde.html")

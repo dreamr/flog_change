@@ -17,9 +17,8 @@ describe FlogChange::GraphGenerator do
   
   describe ".generate" do
     before do
-      `rm ./tmp/index.html`
-      file = Dir["./test/tmp/*.sample"][0]
-      subject.generate(FlogChange::Sample.new(file))
+      `rm ./tmp/index.html` if File.exist?("./tmp/index.html")
+      subject.generate
       @content = File.open("./tmp/index.html") {|f| f.read}
     end
 
@@ -30,6 +29,11 @@ describe FlogChange::GraphGenerator do
     it "must include the sample score" do
       node = Nokogiri::XML(@content)
       node.css('div#sample_score').text.must_equal("4939.0")
+    end
+
+    it "must include the method average" do
+      node = Nokogiri::XML(@content)
+      node.css('div#method_average').text.must_equal("8.5")
     end
   end
 end
