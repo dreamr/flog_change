@@ -26,14 +26,28 @@ describe FlogChange::GraphGenerator do
       `ls ./tmp/index.html`.must_equal "./tmp/index.html\n"
     end
 
-    it "must include the sample score" do
-      node = Nokogiri::XML(@content)
-      node.css('div#sample_score').text.must_equal("4939.0")
+    describe "last_sample" do
+      it "must include the sample score" do
+        html = Nokogiri::XML(@content)
+        html.css('div#last_sample div.score').text.must_equal("4939.0")
+      end
+
+      it "must include the sample method average" do
+        html = Nokogiri::XML(@content)
+        html.css('div#last_sample div.method_average').text.must_equal("8.5")
+      end
     end
 
-    it "must include the method average" do
-      node = Nokogiri::XML(@content)
-      node.css('div#method_average').text.must_equal("8.5")
+    describe "this_sample" do
+      it "must include the sample score" do
+        html = Nokogiri::XML(@content)
+        html.css('div#this_sample div.score').text.must_equal("420.0")
+      end
+
+      it "must include the sample method average" do
+        html = Nokogiri::XML(@content)
+        html.css('div#this_sample div.method_average').text.must_equal("42.0")
+      end
     end
   end
 end

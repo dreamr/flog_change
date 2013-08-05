@@ -6,7 +6,14 @@
   
 </head>
 <body>
-  <div id="sample_score"><%= @sample.score %></div>
-  <div id="method_average"><%= @sample.method_average %></div>
+  <div id="last_sample">
+    <div class="score"><%= @last_sample.score %></div>
+    <div class="method_average"><%= @last_sample.method_average %></div>
+  </div>
+
+  <div id="this_sample">
+    <div class="score"><%= @this_sample.score %></div>
+    <div class="method_average"><%= @this_sample.method_average %></div>
+  </div>
 </body>
 </html>

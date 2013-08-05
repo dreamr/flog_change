@@ -1,5 +1,5 @@
-  4939.0: flog total
-     8.5: flog/method average
+  420.0: flog total
+     42.0: flog/method average
 
    330.3: ReportsHelper total
     36.9: ReportsHelper#qualified_added_to_crm_amount_for /Users/dreamr/proj/1click/clickserve/app/helpers/reports_helper.rb:149
