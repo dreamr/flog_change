@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ flogc <directory_to_flog>
 
 ## Contributing
 
