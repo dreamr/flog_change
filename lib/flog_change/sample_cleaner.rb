@@ -3,12 +3,12 @@ require 'flog_change'
 module FlogChange
   class SampleCleaner
     def self.clean
-      files_to_delete =  FlogChange::App.samples.map do |sample|
+      files_to_delete = FlogChange::App.samples.map do |sample|
         timestamp = timestamp_from_sample_filename(sample)
         sample if old_timestamps.include? timestamp
-      end
+      end.reject {|f| f.nil?}
 
-      delete_files files_to_delete.reject {|f| f.nil?}
+      delete_files files_to_delete
     end
 
     def self.old_timestamps
