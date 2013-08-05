@@ -1,6 +1,8 @@
 # FlogChange
 
-TODO: Write a gem description
+NOTE: Not ready yet :)
+
+FlogChange allows you to flog your application, make some changes, then flog that bitch again and look at the html graphs to see how your changes affect the flog scores.
 
 ## Installation
 
