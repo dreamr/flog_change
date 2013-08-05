@@ -15,7 +15,7 @@ module FlogChange
       timestamps = FlogChange::App.samples.map do |sample| 
         timestamp_from_sample_filename sample
       end
-      timestamps.sort {|a,b| a <=> b}[1..-1]
+      timestamps.sort {|a,b| b <=> a}[1..-1]
     end
 
     def self.delete_files(files)

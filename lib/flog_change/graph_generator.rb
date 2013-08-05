@@ -1,6 +1,8 @@
+require 'flog_change'
+
 module FlogChange
   class GraphGenerator
-    def generate
+    def self.generate
       
     end
   end

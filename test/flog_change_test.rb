@@ -1,8 +1,8 @@
 require 'minitest_helper'
 require 'flog_change'
 
-describe FlogChange::FlogChange do
-  subject { FlogChange::FlogChange }
+describe FlogChange::App do
+  subject { FlogChange::App }
   describe ".samples" do
     let(:time) {Time.now.to_i}
     before do

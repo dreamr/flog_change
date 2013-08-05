@@ -1,10 +1,13 @@
 require "flog_change/version"
-require "flog_change/sample_cleaner"
 
 module FlogChange
   class App
+    def self.sample_dir
+      "./samples/*.sample"
+    end
+
     def self.samples
-      Dir["./samples/*.sample"]
+      Dir[sample_dir]
     end
   end
 end

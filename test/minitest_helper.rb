@@ -1,14 +1,8 @@
-if RUBY_ENGINE == 'ruby' && ENV['COVERAGE']='true'
-  begin
-    require "simplecov"
-    SimpleCov.start do
-      add_filter "test"
-      add_filter "config"
-      command_name "MiniTest"
-    end
-  rescue LoadError
-    warn "unable to load SimpleCov"
-  end
+require "simplecov"
+SimpleCov.start do
+  add_filter "test"
+  add_filter "config"
+  command_name "MiniTest"
 end
 
 require "thincloud/test"
@@ -20,4 +14,5 @@ Dir[File.join("./test/support/**/*.rb")].sort.each { |f| require f }
 # add our gem code path
 lib = File.expand_path('../../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
 
